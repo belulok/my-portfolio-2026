@@ -1,9 +1,8 @@
 .hackathons {
-  position: absolute;
-  left: 171px;
-  top: 1220px;
-  width: 1027px;
-  height: 518px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 60px 0;
 }
 
 .section-header {
@@ -49,6 +48,7 @@
   text-decoration: none;
   line-height: normal;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .view-all:hover {
@@ -56,7 +56,8 @@
 }
 
 .hackathons-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
   align-items: flex-start;
 }
@@ -145,4 +146,58 @@
   background-color: var(--color-primary);
   padding: 4px 8px;
   border-radius: 4px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hackathons {
+    padding: 40px 0;
+  }
+  
+  .hackathons-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .hackathon-title {
+    font-size: 20px;
+  }
+  
+  .hackathon-description {
+    font-size: 14px;
+  }
+  
+  .tech-tag {
+    font-size: 14px;
+  }
+  
+  .hackathon-content {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hackathons {
+    padding: 30px 0;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .hackathon-title {
+    font-size: 18px;
+  }
+  
+  .hackathon-description {
+    font-size: 13px;
+  }
+  
+  .tech-tag {
+    font-size: 12px;
+  }
 }
