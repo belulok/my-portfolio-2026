@@ -76,39 +76,126 @@
   color: var(--color-gray);
 }
 
+/* Mobile Hamburger Menu */
+.mobile-menu-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background-color: rgba(40, 44, 51, 0.98);
+  backdrop-filter: blur(10px);
+  border-left: 1px solid var(--color-gray);
+  display: flex;
+  flex-direction: column;
+  padding: 80px 24px 24px;
+  gap: 24px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-nav.open {
+  right: 0;
+}
+
+.mobile-nav-link {
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--color-gray);
+  font-weight: 400;
+  line-height: normal;
+  transition: color 0.3s ease;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(171, 178, 191, 0.1);
+}
+
+.mobile-nav-link.active {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.mobile-nav-link:hover {
+  color: var(--color-white);
+}
+
+.mobile-language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-gray);
+  cursor: pointer;
+  padding: 12px 0;
+  margin-top: auto;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .header-content {
     padding: 12px 0;
   }
   
-  .nav-links {
-    gap: 16px;
+  .desktop-nav {
+    display: none;
   }
   
-  .nav-link {
-    font-size: 14px;
+  .mobile-menu-button {
+    display: flex;
   }
   
   .logo-text {
-    font-size: 14px;
-  }
-  
-  .language-switcher {
     font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .nav-links {
-    gap: 12px;
-  }
-  
-  .nav-link {
-    font-size: 12px;
-  }
-  
   .logo-text {
     font-size: 12px;
+  }
+  
+  .mobile-nav {
+    width: 100%;
+    right: -100%;
+  }
+  
+  .mobile-nav.open {
+    right: 0;
   }
 }
