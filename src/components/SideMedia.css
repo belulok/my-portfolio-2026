@@ -1,14 +1,16 @@
 .side-media {
-  position: absolute;
+  position: fixed;
   left: 17px;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 32px;
-  height: 350px; /* Increased height for 4 icons */
+  height: 350px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  z-index: 5;
 }
 
 .line-container {
@@ -46,4 +48,11 @@
 
 .social-icon:hover {
   color: var(--color-primary);
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .side-media {
+    display: none;
+  }
 }

@@ -38,12 +38,63 @@ body {
 
 /* Desktop Layout */
 .container {
-  width: 1366px;
+  max-width: 1366px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
-  min-height: 3100px;
+  min-height: 100vh;
   height: auto;
   z-index: 1;
+  padding: 0 20px;
+}
+
+/* Mobile Responsive Breakpoints */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+  
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .section {
+    margin-bottom: 60px;
+  }
+  
+  .btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+  :root {
+    --font-size-sm: 12px;
+    --font-size-base: 14px;
+    --font-size-lg: 16px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  :root {
+    --font-size-sm: 11px;
+    --font-size-base: 13px;
+    --font-size-lg: 15px;
+    --font-size-xl: 18px;
+    --font-size-2xl: 22px;
+  }
 }
 
 /* Utility Classes */

@@ -34,6 +34,14 @@ const Hero = () => {
         <button className="btn btn-primary" onClick={scrollToContacts}>
           Contact me!!
         </button>
+        
+        <div className="status-card">
+          <div className="status-indicator"></div>
+          <p className="status-text">
+            <span className="status-label">Currently working on </span>
+            <span className="status-project">WebMerger</span>
+          </p>
+        </div>
       </div>
       
       <div className="hero-right">
@@ -42,14 +50,6 @@ const Hero = () => {
           <img alt="Sebastian" src={heroImage} />
         </div>
         <Dots className="hero-dots" />
-      </div>
-      
-      <div className="status-card">
-        <div className="status-indicator"></div>
-        <p className="status-text">
-          <span className="status-label">Currently working on </span>
-          <span className="status-project">WebMerger</span>
-        </p>
       </div>
     </section>
   );

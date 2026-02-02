@@ -1,9 +1,8 @@
 .quote {
-  position: absolute;
-  left: 50px;
-  top: 520px;
-  width: 650px;
-  height: 120px;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 60px 0;
 }
 
 .quote-container {
@@ -66,4 +65,66 @@
   color: var(--color-white);
   line-height: normal;
   margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .quote {
+    padding: 40px 0;
+    max-width: 100%;
+  }
+  
+  .quote-container {
+    padding: 16px;
+    margin: 0 20px;
+  }
+  
+  .quote-text {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  
+  .quote-mark {
+    width: 30px;
+    height: 20px;
+  }
+  
+  .quote-mark-left {
+    left: -15px;
+    top: -15px;
+  }
+  
+  .quote-mark-right {
+    right: -15px;
+    bottom: -30px;
+  }
+  
+  .quote-author {
+    right: -8px;
+    bottom: -35px;
+    padding: 6px 8px;
+  }
+  
+  .quote-author p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote {
+    padding: 30px 0;
+  }
+  
+  .quote-container {
+    margin: 0 10px;
+    padding: 12px;
+  }
+  
+  .quote-text {
+    font-size: 14px;
+  }
+  
+  .quote-author p {
+    font-size: 14px;
+  }
 }
