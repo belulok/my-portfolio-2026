@@ -1,0 +1,81 @@
+.about {
+  position: absolute;
+  left: 170px;
+  top: 3340px;
+  width: 1025px;
+  height: 508px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 48px;
+}
+
+.about-text {
+  width: 515px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.about-description {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-visual {
+  position: relative;
+  width: 343px;
+  height: 508px;
+}
+
+.about-image {
+  position: absolute;
+  left: 4px;
+  top: 0;
+  width: 339px;
+  height: 507px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.about-dots-1 {
+  position: absolute;
+  left: 0;
+  top: 59px;
+  width: 84px;
+  height: 84px;
+}
+
+.about-dots-2 {
+  position: absolute;
+  right: 0;
+  top: 279px;
+  width: 84px;
+  height: 84px;
+}
+
+.about-line {
+  position: absolute;
+  left: 48px;
+  bottom: 0;
+  width: 271px;
+  height: 1px;
+}
+
+.about-line img {
+  width: 100%;
+  height: 100%;
+}

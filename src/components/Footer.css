@@ -1,0 +1,133 @@
+.footer {
+  position: absolute;
+  top: 4690px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1366px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding-bottom: 32px;
+}
+
+.footer-line {
+  width: 1366px;
+  height: 1px;
+}
+
+.footer-line img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.footer-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 1025px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.footer-logo-text {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-white);
+  line-height: normal;
+}
+
+.footer-email {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-gray);
+  text-decoration: none;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.footer-email:hover {
+  color: var(--color-white);
+}
+
+.footer-tagline {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-white);
+  line-height: normal;
+  margin: 0;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-media-title {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--color-white);
+  line-height: normal;
+  margin: 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: var(--color-gray);
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.footer-social-icon:hover {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.footer-copyright {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-gray);
+  line-height: normal;
+  margin: 0;
+  text-align: center;
+  width: 298px;
+}

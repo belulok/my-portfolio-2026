@@ -1,0 +1,130 @@
+.projects {
+  position: absolute;
+  left: 171px;
+  top: 680px;
+  width: 1027px;
+  height: 518px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  position: relative;
+  width: 100%;
+}
+
+.section-title {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 32px;
+  color: var(--color-white);
+  line-height: normal;
+  display: flex;
+  align-items: flex-start;
+}
+
+.hash {
+  color: var(--color-primary);
+}
+
+.section-line {
+  flex: 1;
+  height: 1px;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+.section-line img {
+  width: 100%;
+  height: 100%;
+}
+
+.view-all {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-white);
+  text-decoration: none;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.view-all:hover {
+  color: var(--color-primary);
+}
+
+.projects-grid {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.project-card {
+  border: 1px solid var(--color-gray);
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(40, 44, 51, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.project-image {
+  height: 201px;
+  border-bottom: 1px solid var(--color-gray);
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-tech {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 8px;
+  border-bottom: 1px solid var(--color-gray);
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-gray);
+  line-height: normal;
+}
+
+.project-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-title {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--color-white);
+  line-height: normal;
+  margin: 0;
+}
+
+.project-description {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-gray);
+  line-height: normal;
+  margin: 0;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}

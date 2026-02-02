@@ -1,0 +1,236 @@
+.videos {
+  position: absolute;
+  left: 171px;
+  top: 2300px;
+  width: 1027px;
+  height: 580px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  position: relative;
+  width: 100%;
+}
+
+.section-title {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 32px;
+  color: var(--color-white);
+  line-height: normal;
+  display: flex;
+  align-items: flex-start;
+}
+
+.hash {
+  color: var(--color-primary);
+}
+
+.section-line {
+  flex: 1;
+  height: 1px;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+.section-line img {
+  width: 100%;
+  height: 100%;
+}
+
+.view-all {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-white);
+  text-decoration: none;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.view-all:hover {
+  color: var(--color-primary);
+}
+
+.videos-grid {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.video-card {
+  border: 1px solid var(--color-gray);
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(40, 44, 51, 0.8);
+  backdrop-filter: blur(10px);
+  flex: 1;
+}
+
+.video-image {
+  height: 201px;
+  border-bottom: 1px solid var(--color-gray);
+  overflow: hidden;
+  background-color: #1a1d23;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-image iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-card:hover .video-overlay {
+  opacity: 1;
+}
+
+.play-button {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+}
+
+.video-duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--color-white);
+  padding: 4px 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.video-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid var(--color-gray);
+  background-color: rgba(30, 34, 41, 0.5);
+}
+
+.video-channel {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-primary);
+  line-height: normal;
+}
+
+.video-date {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-gray);
+  line-height: normal;
+}
+
+.video-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.video-type-badge {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+  text-transform: uppercase;
+}
+
+.video-title {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--color-white);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.video-description {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-gray);
+  line-height: 1.4;
+  margin: 0;
+  flex: 1;
+}
+
+.video-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.btn {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: transparent;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}

@@ -1,0 +1,13 @@
+.App {
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  width: 1366px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 3100px;
+  height: auto;
+  z-index: 1;
+}

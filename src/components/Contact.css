@@ -1,0 +1,157 @@
+.contact {
+  position: absolute;
+  left: 170px;
+  top: 3900px;
+  width: 1023px;
+  height: 500px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 48px;
+  margin-bottom: 60px;
+}
+
+.contact-text {
+  width: 505px;
+}
+
+.contact-description {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-gray);
+  line-height: normal;
+  margin: 0;
+}
+
+.contact-info {
+  width: 280px;
+}
+
+.contact-card {
+  border: none;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: transparent;
+}
+
+.contact-card-title {
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-white);
+  line-height: normal;
+  margin: 0;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.contact-method:hover .contact-icon {
+  color: var(--color-white);
+}
+
+.contact-handle {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-gray);
+  line-height: normal;
+  word-break: break-all;
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-form-section {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--color-gray);
+  color: var(--color-gray);
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-gray);
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-submit:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}

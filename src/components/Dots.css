@@ -1,0 +1,28 @@
+.dots {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 84px;
+  height: 84px;
+}
+
+.dots-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  flex-shrink: 0;
+}
+
+.dot img {
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+}
