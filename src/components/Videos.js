@@ -12,27 +12,34 @@ const VideoCard = ({ title, description, duration, publishDate, url, channel, im
 
   const videoId = getYouTubeVideoId(url);
 
+  const handleThumbnailClick = () => {
+    window.open(url, '_blank');
+  };
+
   return (
     <div className="video-card">
       <div className="video-image">
         {isEmbedded && videoId ? (
-          <iframe
-            width="100%"
-            height="100%"
-            src={`https://www.youtube.com/embed/${videoId}`}
-            title={title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <div className="video-embed-container">
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&rel=0&modestbranding=1`}
+              title={title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
         ) : (
-          <>
+          <div className="video-thumbnail-container" onClick={handleThumbnailClick} style={{ cursor: 'pointer' }}>
             <img src={image} alt={title} />
             <div className="video-overlay">
               <div className="play-button">▶</div>
             </div>
             <div className="video-duration">{duration}</div>
-          </>
+          </div>
         )}
       </div>
       <div className="video-meta">
@@ -44,9 +51,7 @@ const VideoCard = ({ title, description, duration, publishDate, url, channel, im
         <h3 className="video-title">{title}</h3>
         <p className="video-description">{description}</p>
         <div className="video-buttons">
-          {!isEmbedded && (
-            <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Watch on YouTube &lt;~&gt;</a>
-          )}
+          <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Watch on YouTube &lt;~&gt;</a>
         </div>
       </div>
     </div>
