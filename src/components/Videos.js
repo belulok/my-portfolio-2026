@@ -98,10 +98,10 @@ const Videos = () => {
         </div>
         <a href="#" className="view-all" onClick={handleViewAll}>View all ~~&gt;</a>
       </div>
-      
+
       <div className="videos-grid">
         {videos.map((video, index) => (
-          <VideoCard key={index} {...video} />
+          <VideoCard key={index} {...video} isEmbedded={true} />
         ))}
       </div>
     </section>
