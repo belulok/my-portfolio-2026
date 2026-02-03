@@ -51,29 +51,29 @@ body {
 /* Mobile Responsive Breakpoints */
 @media (max-width: 768px) {
   .container {
-    padding: 0 16px;
+    padding: 0 20px;
     max-width: 100%;
   }
-  
+
   .grid-3 {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .grid-2 {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .section {
     margin-bottom: 60px;
   }
-  
+
   .btn {
     font-size: 14px;
     padding: 6px 12px;
   }
-  
+
   :root {
     --font-size-sm: 12px;
     --font-size-base: 14px;
@@ -85,9 +85,9 @@ body {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 12px;
+    padding: 0 16px;
   }
-  
+
   :root {
     --font-size-sm: 11px;
     --font-size-base: 13px;
