@@ -4,7 +4,9 @@ import './Videos.css';
 
 const lineImage = "https://www.figma.com/api/mcp/asset/bd74e855-afd1-41e8-a8fa-091252df047b";
 
-const VideoCard = ({ title, description, duration, publishDate, url, channel, image, type, isEmbedded = false }) => {
+const VideoCard = ({ title, description, duration, publishDate, url, channel, image, type, isEmbedded = true }) => {
+  const [showEmbedded, setShowEmbedded] = useState(isEmbedded);
+  
   const getYouTubeVideoId = (url) => {
     const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/);
     return match ? match[1] : null;
@@ -13,18 +15,20 @@ const VideoCard = ({ title, description, duration, publishDate, url, channel, im
   const videoId = getYouTubeVideoId(url);
 
   const handleThumbnailClick = () => {
-    window.open(url, '_blank');
+    if (!showEmbedded) {
+      setShowEmbedded(true);
+    }
   };
 
   return (
     <div className="video-card">
       <div className="video-image">
-        {isEmbedded && videoId ? (
+        {showEmbedded && videoId ? (
           <div className="video-embed-container">
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&rel=0&modestbranding=1`}
+              src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&rel=0&modestbranding=1&autoplay=0`}
               title={title}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -51,6 +55,15 @@ const VideoCard = ({ title, description, duration, publishDate, url, channel, im
         <h3 className="video-title">{title}</h3>
         <p className="video-description">{description}</p>
         <div className="video-buttons">
+          {!showEmbedded && (
+            <button 
+              className="btn btn-secondary"
+              onClick={() => setShowEmbedded(true)}
+              style={{ marginRight: '8px' }}
+            >
+              Play Here &lt;~&gt;
+            </button>
+          )}
           <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Watch on YouTube &lt;~&gt;</a>
         </div>
       </div>
