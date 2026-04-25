@@ -92,7 +92,7 @@ const Skills = () => {
         <div className="section-line">
           <img src={lineImage} alt="" />
         </div>
-        <a href="#" className="view-all" onClick={handleViewAll}>View all ~~&gt;</a>
+        <button className="view-all" onClick={handleViewAll}>View all ~~&gt;</button>
       </div>
       
       <div className="skills-content">

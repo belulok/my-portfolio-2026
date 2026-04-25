@@ -3,8 +3,7 @@ import Dots from './Dots';
 import InteractiveBackground from './InteractiveBackground';
 import './SkillsExpanded.css';
 
-// Using the asset URLs from Figma
-const logoImage = "https://www.figma.com/api/mcp/asset/26810a9d-1495-4ae0-960e-306989eb5868";
+
 
 const SkillBlock = ({ title, skills, className = "" }) => (
   <div className={`skill-block-expanded ${className}`}>
